@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Song Detector",
+    "description": "Detect song names from YouTube",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/watch*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    
+    }
+  }
+  
