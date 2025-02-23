@@ -9,23 +9,23 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Mesaj alma hatası:", chrome.runtime.lastError);
         return;
       }
-      const song = (response && response.song) || "Şarkı bulunamadı";
+      const song = (response && response.song) || "Waiting for host to play a song...";
       document.getElementById("song-title").innerText = song;
       generateQRCode(song);
     });
   }
   
   function generateQRCode(song) {
-    const baseUrl = "https://www.mysite.com";
+    const baseUrl = "https://nowynreal.github.io/TuneScanner";
     const urlWithParam = `${baseUrl}/?song=${encodeURIComponent(song)}`;
   
     const qrContainer = document.getElementById("qrcode");
-    qrContainer.innerHTML = "";
+    qrContainer.innerHTML = ""; 
   
     new QRCode(qrContainer, {
       text: urlWithParam,
-      width: 180,
-      height: 180,
+      width: 280,
+      height: 280,
       colorDark : "#000000",
       colorLight : "#ffffff",
       correctLevel : QRCode.CorrectLevel.H

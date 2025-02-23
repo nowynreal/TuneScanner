@@ -3,22 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YouTube Şarkı Gösterici</title>
+  <title>TuneScanner by nowy</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 10px; width: 220px; }
-    h3 { margin: 0; font-size: 18px; }
-    .song-info { margin-top: 10px; }
-    #qrcode { margin-top: 10px; text-align: center; }
+
+    body {
+        background-image: linear-gradient(to right, #1d1d1d 0%, #2d2d2d 51%, #1d1d1d  100%);
+        border: solid 1px #e1e1e1;
+        border-radius: 10px;
+    }
+
+    .container {
+        font-family: Arial, sans-serif;
+        padding: 10px;
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+        color:#e1e1e1;
+    }
+
+
+         
+
+    .ts-title-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        /* background-color: red; */
+    }
+
+    .ts-title {
+        font-size: 30px;
+    }
+
+    .title-line-container {
+        width: 100%;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: aqua; */
+    }
+
+    .title-line {
+        width: 80%;
+        border: 1px solid #e1e1e1;
+    }
+
+    .song-info-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: blue; */
+    }
+
+    .song-info {
+        font-size: 18px;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .qr-container {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid #414141;
+        border-radius: 10px;
+        margin: 20px;
+    }
   </style>
 </head>
 <body>
-  <h3>Şarkı Bilgisi</h3>
+
+    <div class="container">
+        <div class="ts-title-container">
+            <div class="ts-title">
+                TuneScanner
+            </div>
+        </div>
+
+        <div class="title-line-container">
+            <div class="title-line"></div>
+        </div>
+
+        <div class="song-info-container">
+            <div class="song-info" id="song-title">Loading...</div>
+        </div>
+
+        <div class="qr-container">
+            <div class="quarkod" id="qrcode"></div>
+        </div>
+
+        <div class="credit-container">
+            <div class="credit">developed by <a style="text-decoration: none; color: #0066CC;" href="https://github.com/nowynreal" target="_blank" >Semih </a></div>
+        </div>
+
+    </div>
+
+    <!-- <div class="ts-title">
+        <h3>TuneScanner</h3>
+    </div>
+    <div class="title-line">
+
+    </div>
   <div class="song-info">
-    <p><strong>Şarkı:</strong> <span id="song-title">Yükleniyor...</span></p>
+    <span id="song-title">Loading...</span></p>
   </div>
-  <div id="qrcode"></div>
+
+  <div class="qr-container">
+    <div class="quarkod" id="qrcode"></div>
+  </div> -->
+
+
   <script src="qrcode.min.js"></script>
-  <script src="popup.js"></script>  
+  <script src="popup.js"></script>
 </body>
 </html>
-
