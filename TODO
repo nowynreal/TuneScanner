@@ -2,3 +2,7 @@
 - Style website.
 - Add README
 - Create and add icon
+
+Fix:
+
+- When nothing detected, qr > loading icon.
