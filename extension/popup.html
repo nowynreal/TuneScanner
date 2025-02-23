@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Şarkı Gösterici</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 10px; width: 220px; }
+    h3 { margin: 0; font-size: 18px; }
+    .song-info { margin-top: 10px; }
+    #qrcode { margin-top: 10px; text-align: center; }
+  </style>
+</head>
+<body>
+  <h3>Şarkı Bilgisi</h3>
+  <div class="song-info">
+    <p><strong>Şarkı:</strong> <span id="song-title">Yükleniyor...</span></p>
+  </div>
+  <div id="qrcode"></div>
+  <script src="qrcode.min.js"></script>
+  <script src="popup.js"></script>  
+</body>
+</html>
+
